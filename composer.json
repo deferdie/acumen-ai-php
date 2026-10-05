@@ -1,0 +1,44 @@
+{
+  "name": "deferdie/acumen-ai-php",
+  "description": "PHP SDK for Acumen AI Security Monitoring — capture LLM traffic, redact PII, and stream events securely.",
+  "type": "library",
+  "license": "MIT",
+  "keywords": ["acumen", "ai", "security", "llm", "openai", "anthropic", "laravel"],
+  "homepage": "https://acumenlogs.com",
+  "authors": [
+    {
+      "name": "Ferdie De Oliveira",
+      "email": "deferdie@gmail.com",
+      "homepage": "https://acumenlogs.com",
+      "role": "Developer"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "AcumenAi\\": "src/AcumenAi/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "AcumenAi\\Tests\\": "src/tests/"
+    }
+  },
+  "require": {
+    "php": "^8.1",
+    "guzzlehttp/guzzle": "^7.2"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "^10.0|^11.0"
+  },
+  "extra": {
+    "laravel": {
+      "providers": [
+        "AcumenAi\\AcumenAiServiceProvider"
+      ],
+      "aliases": {
+        "AcumenAi": "AcumenAi\\Facade\\AcumenAi"
+      }
+    }
+  },
+  "minimum-stability": "stable"
+}
